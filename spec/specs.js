@@ -13,7 +13,7 @@ describe('Ticket', function() {
 
   it("adds the showTimePrice method to all tickets", function() {
     var testTicket = new Ticket("first-run", "matinee", 21);
-    expect(testTicket.showTimePrice()).to.equal(5);
+    expect(testTicket.showTimePrice()).to.equal(4);
   });
 
   it("adds the agePrice method to all tickets", function() {

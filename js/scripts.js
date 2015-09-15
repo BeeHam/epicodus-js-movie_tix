@@ -26,3 +26,15 @@ Ticket.prototype.agePrice = function() {
     return baseAgePrice + 5;
   }
 };
+
+Ticket.prototype.showTimePrice = function() {
+  var baseShowTimePrice = 0;
+
+  if (this.showTime === "morning") {
+    return baseShowTimePrice + 3;
+  } else if (this.showTime === "matinee") {
+    return baseShowTimePrice + 4;
+  } else {
+    return baseShowTimePrice + 5;
+  }
+};
