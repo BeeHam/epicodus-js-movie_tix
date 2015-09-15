@@ -20,4 +20,9 @@ describe('Ticket', function() {
     var testTicket = new Ticket("first-run", "matinee", 21);
     expect(testTicket.agePrice()).to.equal(5);
   });
+
+  it("create total movie price", function() {
+    var testTicket = new Ticket("first-run", "matinee", 21);
+    expect(testTicket.totalPrice()).to.equal(14);
+  });
 });

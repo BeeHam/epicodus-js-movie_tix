@@ -38,3 +38,7 @@ Ticket.prototype.showTimePrice = function() {
     return baseShowTimePrice + 5;
   }
 };
+
+Ticket.prototype.totalPrice = function() {
+  return this.movieRunPrice() + this.agePrice() + this.showTimePrice();
+};
