@@ -1,19 +1,28 @@
-function Ticket(movie, showTime, age) {
-  this.movie = movie;
+function Ticket(movieRun, showTime, age) {
+  this.movieRun = movieRun;
   this.showTime = showTime;
   this.age = parseInt(age);
 }
 
+Ticket.prototype.movieRunPrice = function() {
+  var baseRunPrice = 0;
+
+  if (this.movieRun === "first-run") {
+    return baseRunPrice + 5;
+  } else {
+    return baseRunPrice + 4;
+  }
+};
+
 
 Ticket.prototype.agePrice = function() {
-
-  var basePrice = 0;  //first-run, adult, evening
+  var baseAgePrice = 0;
 
   if (this.age <= 11) {
-    return basePrice + 3;
+    return baseAgePrice + 3;
   } else if (this.age >= 65) {
-    return basePrice + 4;
+    return baseAgePrice + 4;
   } else {
-    return basePrice + 5;
+    return baseAgePrice + 5;
   }
-}
+};
