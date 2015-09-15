@@ -6,8 +6,18 @@ describe('Ticket', function() {
     expect(testTicket.age).to.equal(21);
   });
 
-  it("adds the price method to all tickets", function() {
+  it("adds the movieRunPrice method to all tickets", function() {
     var testTicket = new Ticket("Titanic", "matinee", 21);
-    expect(testTicket.price()).to.equal(8);
+    expect(testTicket.movieRunPrice()).to.equal(5);
+  });
+
+  it("adds the showTimePrice method to all tickets", function() {
+    var testTicket = new Ticket("Titanic", "matinee", 21);
+    expect(testTicket.showTimePrice()).to.equal(5);
+  });
+
+  it("adds the agePrice method to all tickets", function() {
+    var testTicket = new Ticket("Titanic", "matinee", 21);
+    expect(testTicket.agePrice()).to.equal(5);
   });
 });
