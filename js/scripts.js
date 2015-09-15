@@ -57,6 +57,6 @@ $(document).ready(function() {
     $("#total-price").text("$" + newTicket.totalPrice() + ".00");
 
 
-    $(".show-price").show();
+    $(".show-price").show("fold");
   });
 });

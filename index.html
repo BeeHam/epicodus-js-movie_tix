@@ -12,21 +12,30 @@
       <h3>Welcome to the</h3>
       <h1>Movies!</h1>
 
-      <h2>Movie One</h2>
+      <h2>Kingsman: The Secret Service</h2>
 
       <form id="ticket-choice">
-        <label for="">First Run</label>
-        <input type="radio" name="movie" value="first-run">
-        <label for="">Second Run</label>
-        <input type="radio" name="movie" value="second-run">
-        <br>
-        <label for=""><input type="radio" name="showtime" value="morning">Morning (before 12:00 PM)</label>
-        <label for=""><input type="radio" name="showtime" value="matinee">Matinee (12:00 PM - 5:00 PM)</label>
-        <label for=""><input type="radio" name="showtime" value="evening">Evening (after 5:00 PM)</label>
-        <br>
-        <label for="">Age</label>
-        <input type="text" name="age" id="age">
-        <br>
+        <h3>Format</h3>
+        <div class="form-group">
+          <label for="">3D IMAX</label>
+          <input type="radio" name="movie" value="first-run">
+          <label for="">3D</label>
+          <input type="radio" name="movie" value="second-run">
+        </div>
+        <h3>Showtimes</h3>
+        <div class="form-group">
+          <label for=""><input type="radio" name="showtime" value="morning">Morning (before 12:00 PM)</label>
+        </div>
+        <div class="form-group">
+          <label for=""><input type="radio" name="showtime" value="matinee">Matinee (12:00 PM - 5:00 PM)</label>
+        </div>
+        <div class="form-group">
+          <label for=""><input type="radio" name="showtime" value="evening">Evening (after 5:00 PM)</label>
+        </div>
+        <div class="form-group form-inline">
+          <label for="">Age</label>
+          <input type="text" name="age" id="age" class="form-control">
+        </div>
         <button type="submit" class="btn btn-info">Submit</button>
       </form>
 
