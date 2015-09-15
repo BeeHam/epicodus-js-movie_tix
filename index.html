@@ -2,10 +2,39 @@
 <html>
   <head>
     <title>TicketBlaster!</title>
-    <link rel="stylesheet" href="/css/master.css">
-    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
+    <div class="container">
+      <h3>Welcome to the</h3>
+      <h1>Movies!</h1>
 
+      <h2>Movie One</h2>
+
+      <form id="ticket-choice">
+        <label for="">First Run</label>
+        <input type="radio" name="movie" value="first-run">
+        <label for="">Second Run</label>
+        <input type="radio" name="movie" value="second-run">
+        <br>
+        <label for=""><input type="radio" name="showtime" value="morning">Morning (before 12:00 PM)</label>
+        <label for=""><input type="radio" name="showtime" value="matinee">Matinee (12:00 PM - 5:00 PM)</label>
+        <label for=""><input type="radio" name="showtime" value="evening">Evening (after 5:00 PM)</label>
+        <br>
+        <label for="">Age</label>
+        <input type="text" name="age" id="age">
+        <br>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+
+      <div class="show-price">
+        <h3>Your Ticket Price:</h3>
+        <h1 id="total-price"></h1>
+      </div>
+
+    </div>
   </body>
 </html>

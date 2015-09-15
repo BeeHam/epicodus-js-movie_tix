@@ -42,3 +42,21 @@ Ticket.prototype.showTimePrice = function() {
 Ticket.prototype.totalPrice = function() {
   return this.movieRunPrice() + this.agePrice() + this.showTimePrice();
 };
+
+
+$(document).ready(function() {
+  $("form#ticket-choice").submit(function(event) {
+    event.preventDefault();
+
+    var movieRunInput = $('input[name=movie]:checked').val();
+    var showTimeInput = $('input[name=showtime]:checked').val();
+    var ageInput = parseInt($('input#age').val());
+
+    var newTicket = new Ticket(movieRunInput, showTimeInput, ageInput);
+
+    $("#total-price").text("$" + newTicket.totalPrice() + ".00");
+
+
+    $(".show-price").show();
+  });
+});
